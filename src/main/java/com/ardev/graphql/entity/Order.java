@@ -7,8 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
-
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,13 +16,13 @@ import java.math.BigInteger;
 public class Order {
     @Id
     @GeneratedValue
-    private BigInteger orderId;
+    private Long orderId;
     private String orderName;
     private String orderDesc;
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "person_id", nullable = false)
     private Person person;
 }

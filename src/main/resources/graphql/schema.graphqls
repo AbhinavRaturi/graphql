@@ -1,0 +1,33 @@
+input PersonInput{
+    firstName : String,
+    lastName : String,
+    email : String,
+    phone : String
+}
+
+type Person{
+    personId : ID,
+    firstName : String,
+    lastName : String,
+    email : String,
+    phone : String,
+    orders : [Order]
+}
+
+type Order{
+    orderId : ID,
+    orderName : String,
+    orderDesc : String,
+    status : String,
+    person : Person
+}
+
+type Query{
+    getPersons:[Person]
+    getOrders:[Order]
+}
+
+type Mutation{
+    createPerson(persons:PersonInput):Person
+    createOrder(orderName:String, orderDesc:String,personId:String): Order
+}

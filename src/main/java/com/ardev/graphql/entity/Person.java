@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @Data
@@ -18,9 +17,11 @@ import java.util.List;
 public class Person {
     @Id
     @GeneratedValue
-    private BigInteger personId;
+    private Long personId;
     private String firstName;
     private String lastName;
     private String email;
     private String phone;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Order> orders;
 }

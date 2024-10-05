@@ -2,14 +2,14 @@ spring:
   application:
     name: graphql
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: admin
+    url: {POSTGRES_URL}
+    username: {POSTGRES_USERNAME}
+    password: {POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -20,3 +20,6 @@ spring:
   sql:
     init:
       mode: always
+  graphql:
+    graphiql:
+      enabled: true
