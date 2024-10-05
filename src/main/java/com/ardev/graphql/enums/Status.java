@@ -1,4 +1,4 @@
-package com.ardev.graphql.Enums;
+package com.ardev.graphql.enums;
 
 public enum Status {
     /** Order has been cancelled */

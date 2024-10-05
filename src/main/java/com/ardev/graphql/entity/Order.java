@@ -1,6 +1,6 @@
 package com.ardev.graphql.entity;
 
-import com.ardev.graphql.Enums.Status;
+import com.ardev.graphql.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

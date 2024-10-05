@@ -1,6 +1,6 @@
 package com.ardev.graphql.service;
 
-import com.ardev.graphql.Enums.Status;
+import com.ardev.graphql.enums.Status;
 import com.ardev.graphql.entity.Order;
 import com.ardev.graphql.entity.Person;
 import com.ardev.graphql.repository.OrderRepository;
